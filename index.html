@@ -5,16 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Certificate Request Form</title>
 
+<!-- Titillium Web font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
+
 body {
     box-sizing: border-box;
     background-color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Titillium Web', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -90,7 +96,7 @@ body {
     font-weight: 600;
     color: #152d79;
     margin-bottom: 12px;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.25px;
 }
 
 .description {
@@ -100,7 +106,7 @@ body {
 .emphasized {
     color: #2d3748;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5;
     margin-bottom: 12px;
     text-align: justify;
@@ -122,7 +128,7 @@ label {
     display: block;
     margin-bottom: 8px;
     color: #4a5568;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -162,15 +168,13 @@ input[type="email"]:hover {
     padding: 18px 24px;
     border: none;
     border-radius: 12px;
-    font-family: Calibri, Arial, sans-serif;
+    font-family: 'Titillium Web', Arial, sans-serif;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 8px;
     box-shadow: 0 4px 12px rgba(107, 183, 69, 0.3);
-    position: relative;
-    overflow: hidden;
 }
 
 .submit-btn:hover {
@@ -218,32 +222,46 @@ input[type="email"]:hover {
 </div>
 
 <div class="description">
-<p class="emphasized">Please provide your full name as you'd like it to appear on your certificate.</p>
-<p class="less-emphasized">Take a moment to double-check your spelling - your name will appear exactly as entered. Your certificate will be sent to your inbox within a week after review. If you don't see it, please check your spam folder just in case.</p>
+    <p class="emphasized" style="font-size: 17px;">
+        Please provide your full name as you'd like it to appear on your certificate.
+    </p>
+
+    <p class="less-emphasized" style="font-size: 15px;">
+        Take a moment to double-check your spelling – your name will appear exactly as entered.
+        Your certificate will be sent to your inbox
+        <span style="color: #5a9e3a; font-weight: 600;">
+            within a week after review
+        </span>.
+        If you don't see it, please check your spam folder just in case.
+    </p>
+
+    <p class="less-emphasized" style="margin-top: 10px; font-size: 14.5px; font-style: italic;">
+        Please note: submitting this form multiple times will not speed up delivery.
+    </p>
 </div>
-</div>
+
 
 <div class="form-section">
 <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="9c531ce2-5def-43d2-aec7-8eaea14532ec">
-    <input type="hidden" name="form_name" value="Navigating NPD and Food Safety">
-    
-  <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-  </div>
+<input type="hidden" name="access_key" value="9c531ce2-5def-43d2-aec7-8eaea14532ec">
+<input type="hidden" name="form_name" value="Navigating NPD and Food Safety">
 
-  <div class="form-group">
-      <label for="surname">Surname</label>
-      <input type="text" id="surname" name="surname" required>
-  </div>
+<div class="form-group">
+<label for="name">Name</label>
+<input type="text" id="name" name="name" required>
+</div>
 
-  <div class="form-group">
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
-  </div>
+<div class="form-group">
+<label for="surname">Surname</label>
+<input type="text" id="surname" name="surname" required>
+</div>
 
-  <button type="submit" class="submit-btn">Request Certificate</button>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" required>
+</div>
+
+<button type="submit" class="submit-btn">Request Certificate</button>
 </form>
 </div>
 
